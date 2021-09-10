@@ -2,10 +2,10 @@ const URLGET = "https://restcountries.eu/rest/v2/regionalbloc/eu"
 
 
 $ (document).ready(() => {
-    $.get(URLGET, function (hola,chau){
-        if (chau === "success") {
-          let misdatos = hola
-            for (const dato of misdatos) {
+    $.get(URLGET, function (respuesta,fact){
+        if (fact === "success") {
+          let info = respuesta
+            for (const dato of info) {
                 $(".country").append(`
                     <Option>${dato.name}</Option>
                     `)
